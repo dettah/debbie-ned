@@ -1,0 +1,37 @@
+:root {
+  --cursor-color: white;
+}
+
+.typing {
+  border-right: 2px solid var(--cursor-color);
+  animation:
+    blinking 1s steps(1, end) infinite,
+    typing 4s steps(15, end) infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 50px;
+}
+
+@keyframes blinking {
+  0% {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--cursor-color);
+  }
+
+  100% {
+    border-color: transparent
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  60% {
+    width: 100%;
+  }
+}
