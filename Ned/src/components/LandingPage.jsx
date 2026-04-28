@@ -1,20 +1,25 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import HeroImg from "../assets/musician.jpg";
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import HeroImg from "../assets/musician.png";
+import HeroImg_sm from "../assets/musician_sm.jpg";
 import '../App.css'
 import AssessmentImg from "../assets/debbie_assessment.png"
 import TrainingImg from "../assets/debbie_training.png"
 import TranscriptionImg from "../assets/debbie_transcription.png"
 import CommunityImg from "../assets/debbie_community.png"
 import Rehearse from "../assets/debbie_rehearsal.jpg"
-import Transcription  from "../assets/debbie_online.jpg"
+import Transcription from "../assets/debbie_online.jpg"
 import Online from "../assets/debbie_trans.jpg"
 import Group from "../assets/debbie_group.jpg"
 import { AssessmentIcon } from "./svgs/AssessmentIcon";
+import Logo from "../assets/logo.png";
 import { InstrumentIcon } from "./svgs/InstrumentIcon";
 import { CommunityIcon } from "./svgs/CommunityIcon";
 import { TranscriptionIcon } from "./svgs/TranscriptionIcon";
-
+import Socials from "./Socials";
+import Mail from "../assets/socials/envelope-regular.png"
+import Call from "../assets/socials/phone-solid.png"
+import FooterBackground from "../assets/music_background.jpg"
 
 
 const steps = [
@@ -69,13 +74,38 @@ const offerings = [
 
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setDarkMode(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (darkMode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+    setDarkMode(!darkMode);
+  };
 
   return (
     <div className="bg-[#0a0a0a] text-white font-sans scroll-smooth">
 
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full bg-black/40 backdrop-blur-xl z-50 px-6 py-4 flex justify-between items-center">
-        <h1 className="text-lg font-semibold tracking-wide ">Debbie Ned</h1>
+        {/* <h1 className="text-lg font-semibold tracking-wide ">Debbie Ned</h1> */}
+        <img src={Logo} alt="debbie_ned's logo" className="h-[12vh]" />
 
         <div className="hidden md:flex gap-8 text-sm text-gray-300">
           <a href="#about" className="hover:text-white transition">About</a>
@@ -83,10 +113,33 @@ export default function LandingPage() {
           <a href="#offerings" className="hover:text-white transition">Offerings</a>
           <a href="#contact" className="hover:text-white transition">Book</a>
         </div>
+        {/* <div className="flex items-center gap-4"> */}
+        {/* <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-white/10 dark:bg-white/10  hover:scale-110 transition"
+          >
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button> */}
 
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X /> : <Menu />}
-        </button>
+        {/* <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X /> : <Menu />}
+          </button> */}
+        {/* </div> */}
+
+        <div className="flex items-center gap-3">
+          {/* THEME TOGGLE */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-white/10 hover:scale-110 transition"
+          >
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          {/* MOBILE MENU */}
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </nav>
 
       {/* MOBILE MENU */}
@@ -101,12 +154,17 @@ export default function LandingPage() {
       )}
 
       {/* HERO */}
-      <section className="relative h-screen flex items-center">
+      <section className="relative h-screen md:h-screen flex items-center">
         <div className="absolute inset-0 pt-10 md:pt-0 border overflow-hidden">
           <img
             src={HeroImg}
-            className=" w-full h-full md:h-auto  object-cover opacity-60"
+            className=" w-full h-full md:h-auto  object-cover opacity-60 max-md:hidden"
           />
+          <img
+            src={HeroImg_sm}
+            className=" md:hidden w-full h-full md:h-auto  object-cover opacity-60"
+          />
+
         </div>
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-transparent"></div>
 
@@ -120,7 +178,7 @@ export default function LandingPage() {
           </div>
 
           <p className="mt-6 text-gray-300 text-lg max-w-lg">
-            Closing the gender gap in music by empowering women to lead — not just sing, but play, direct, and own their place.
+            Empowering all through musical knowledge — Raising musical giants all over the world!
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -201,22 +259,17 @@ export default function LandingPage() {
           Coaching Programmes
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 ">
           {[
             {
-              name: "Starter",
-              price: "₦20,000/mo",
-              desc: "For complete beginners",
+              name: "Single Session",
+              price: "$25/mo",
+              desc: "For single session subscription",
             },
             {
-              name: "Grower",
-              price: "₦40,000/mo",
-              desc: "For intermediate learners",
-            },
-            {
-              name: "Pioneer",
-              price: "₦80,000/mo",
-              desc: "For advanced & ministry teams",
+              name: "Monthly Session",
+              price: "$75/mo",
+              desc: "For monthly session subscription",
             },
           ].map((plan) => (
             <div key={plan.name} className="bg-[#111] p-8 rounded-2xl hover:scale-[1.03] transition">
@@ -239,8 +292,8 @@ export default function LandingPage() {
 
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {offerings.map((item) => (
-            <div key={item.title} className="bg-[#111] pt-6 p-2 rounded-xl text-center hover:scale-105 transition">
-              <div>
+            <div key={item.title} className="bg-[#111] pt-6 p-2 rounded-xl text-center hover:scale-105 transition mb-8">
+              <div className="text-xl pb-5">
                 {item.title}
               </div>
               <div>
@@ -251,27 +304,51 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="py-24 px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Book a Session
-        </h2>
 
-        <p className="text-gray-400 mb-6">
-          Tell us about your goals and let’s get started.
-        </p>
-
-        <a
-          href="mailto:debbiened@gmail.com"
-          className="px-8 py-3 bg-white text-black rounded-full hover:scale-105 transition"
-        >
-          Contact Debbie
-        </a>
-      </section>
 
       {/* FOOTER */}
-      <footer className="py-6 text-center text-gray-500">
-        @debbie_ned_music
+      <footer className="py-6 text-center text-gray-500 relative">
+        <img src={FooterBackground} alt="" className=" absolute top-0 right-0 w-full h-full object-cover   " />
+        <div className="absolute inset-0 bg-black/80  "></div>
+        <div className=" relative z-10" >
+          {/* CONTACT */}
+          <section id="contact" className="pt-24  px-6 text-center">
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Book a Session
+            </h2>
+
+            <p className="text-gray-400 mb-6">
+              Tell us about your goals and let’s get started.
+            </p>
+            <div className="flex justify-center items-center">
+              <a
+                href="mailto:debbiened@gmail.com"
+                className="px-8 py-3 bg-white text-black rounded-full hover:scale-105 transition flex items-center gap-2 w-fit"
+              >
+                <img src={Mail} alt="" className="h-8" />
+                Contact Debbie
+              </a>
+            </div>
+          </section>
+
+          <div className="">
+            <a href="tel:+2348171309425" className="flex my-6 justify-center items-center gap-1.5"> 
+              <img src={Call} alt="Phone icon" className="h-9 w-9 rounded-full p-1 bg-white hover:bg-white/50  transition ease-in duration-500" /> <p> +234 817 130 9425
+              </p>
+               </a>
+          </div>
+
+          {/* SOCIALS */}
+          <div className="flex justify-center mb-5">
+            <Socials />
+          </div>
+
+          <div className=" mb-5 mt-14 flex justify-center">
+            <img src={Logo} alt="debbie_ned's logo" className="h-[10vh]" />
+          </div>
+          @debbie_ned_music
+        </div>
       </footer>
     </div>
   );
