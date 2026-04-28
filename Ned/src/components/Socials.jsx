@@ -12,7 +12,7 @@ const socials = [
         id: 1,
         img: X_logo,
         alt: "X logo linking Debbie_ned's x account",
-        url: "https://www.facebook.com",
+        url: "https://www.x.com",
     },
     {
         id: 2,
@@ -24,13 +24,13 @@ const socials = [
         id: 3,
         img: LinkedIn_logo,
         alt: "X logo linking Debbie_ned's x account",
-        url: "https://www.facebook.com",
+        url: "https://www.linkedin.com",
     },
     {
         id: 4,
         img: WhatsApp,
         alt: "WhatsApp logo linking Debbie_ned's WhatsApp page",
-        url: "https://www.facebook.com",
+        url: "https://www.wa.me.2348171309425",
     },
 ]
 
