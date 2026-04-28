@@ -155,7 +155,10 @@ export default function LandingPage() {
           />
 
         </div>
-        <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-transparent"></div>
+
+        <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/10 md:from-black md:via-black/70 md:to-transparent"></div>
+
+
 
         <div className="relative z-10 max-w-7xl md:mt-6  md:ml-16 mx-auto px-6 ">
           <p className="text-xs tracking-[0.3em] uppercase text-gray-400 mb-4 typing ">
