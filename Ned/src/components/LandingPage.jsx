@@ -187,7 +187,7 @@ export default function LandingPage() {
         <h2 className="text-3xl md:text-4xl font-bold mb-8">About Debbie</h2>
 
         <p className="text-gray-300 max-w-3xl mx-auto mb-12">
-          Debbie Ned is a multi-instrumentalist, vocalist, and music educator based in Nigeria. In under two months, she has coached 50+ women, secured church and corporate endorsements, and built a fast-growing movement helping women discover their voice through instruments.
+          Debbie Ned is a multi-instrumentalist, vocalist, and music educator based in Nigeria. In under two months, she has coached 50+ musicians from all over the world, secured church and corporate endorsements, and built a fast-growing movement helping people discover their voice through instruments.
         </p>
 
         <div className="grid md:grid-cols-4 gap-6">

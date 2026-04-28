@@ -2,6 +2,10 @@
   --cursor-color: white;
 }
 
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .typing {
   border-right: 2px solid var(--cursor-color);
   animation:
