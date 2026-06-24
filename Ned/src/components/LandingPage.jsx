@@ -154,60 +154,6 @@ export default function LandingPage() {
 
 
 
-      {/* HERO
-      <section className="relative h-screen md:h-screen flex items-center bg-[#F8FAFC]">
-        <div className="absolute inset-0 pt-10 md:pt-0 overflow-hidden">
-          <img
-            src={HeroImg}
-            className="w-full h-full md:h-auto object-cover opacity-100 max-md:hidden"
-            alt="Debbie Ned Hero"
-          />
-          <img
-            src={HeroImg_sm}
-            className="md:hidden w-full h-full md:h-auto object-cover opacity-25"
-            alt="Debbie Ned Hero Mobile"
-          />
-        </div>
-
-        {/* LIGHT MODE GRADIENT OVERLAY */}
-      {/* 
-      <div className="absolute inset-0 bg-linear-to-r from-[#F8FAFC]/95 via-[#F8FAFC0a]/80 to-transparent md:from-[#F8FAFC] md:via-[#F8FAFC]/90  md:to-transparent"></div>
-
-        <div className="relative z-10 max-w-7xl md:mt-6 md:ml-16 mx-auto px-6">
-          <p className="text-xs tracking-[0.3em] uppercase text-[#64748B] font-semibold mb-4 typing">
-            Piano • Bass • Vocals
-          </p>
-          <div className="w-fit">
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-[#1E293B]">
-              Debbie Ned
-            </h1>
-          </div>
-
-          <p className="mt-6 text-[#334155] text-lg max-w-lg font-normal">
-            Empowering all through musical knowledge — Raising musical giants all over the world!
-          </p>
-
-          <div className="mt-8 flex gap-4">
-          */}
-      {/* PRIMARY CTA BUTTON */}
-      {/*<a
-              href="#contact"
-              className="px-4 md:px-6 py-3 bg-[#00D1B2] text-white rounded-full hover:bg-[#00B89F] hover:scale-105 shadow-md shadow-[#00D1B2]/20 transition duration-200 whitespace-nowrap font-medium"
-            >
-              Book a Session
-            </a>*/}
-
-      {/* SECONDARY OUTLINE BUTTON */}
-      {/*<a
-              href="#programmes"
-              className="px-4 md:px-6 py-3 border border-[#E2E8F0] bg-white text-[#1E293B] rounded-full hover:bg-[#F1F5F9] hover:border-[#CBD5E1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#1E293B]/5"
-            >
-              View Programmes
-            </a>
-          </div>
-        </div>
-      </section> */}
-
       {/* HERO */}
       <section className="relative h-screen md:h-screen flex items-center bg-[#FAFAF9]">
         {/* BACKGROUND IMAGES CONTAINER */}
@@ -247,7 +193,7 @@ export default function LandingPage() {
             {/* BRAND ACCENT CTA BUTTON */}
             <a
               href="#contact"
-              className="px-5 md:px-7 py-3.5 bg-[#F59E0B] text-white rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 whitespace-nowrap font-semibold tracking-wide"
+              className="px-2 flex-1 md:px-7 py-3.5 bg-[#F59E0B] text-white rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 whitespace-nowrap font-semibold tracking-wide text-center"
             >
               Book a Session
             </a>
@@ -255,7 +201,7 @@ export default function LandingPage() {
             {/* SECONDARY OUTLINE BUTTON */}
             <a
               href="#programmes"
-              className="px-5 md:px-7 py-3.5 border border-[#E7E5E4] bg-white text-[#0F172A] rounded-full hover:bg-[#F5F5F4] hover:border-[#D6D3D1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#0F172A]/5"
+              className="px-2 text-center flex-1 md:px-7 py-3.5 border border-[#E7E5E4] bg-white text-[#0F172A] rounded-full hover:bg-[#F5F5F4] hover:border-[#D6D3D1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#0F172A]/5"
             >
               View Programmes
             </a>
