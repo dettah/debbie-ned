@@ -1,5 +1,5 @@
 :root {
-  --cursor-color: white;
+  --cursor-color: rgb(0, 0, 0);
 }
 
 html {
@@ -14,6 +14,7 @@ html {
   overflow: hidden;
   white-space: nowrap;
   padding-right: 50px;
+  width: fit-content;
 }
 
 @keyframes blinking {
