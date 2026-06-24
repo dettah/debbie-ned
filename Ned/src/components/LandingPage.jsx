@@ -155,7 +155,7 @@ export default function LandingPage() {
 
 
       {/* HERO */}
-      <section className="relative border bg-[#FAFAF9] min-h-auto md:min-h-[70vh] lg:min-h-[85vh] pt-32 md:py-32 flex items-center bg-[#FAFAF9">
+      <section className="relative border bg-[#FAFAF9] min-h-auto md:min-h-[65vh] lg:min-h-[70vh] pt-32 md:py-30 flex items-center bg-[#FAFAF9">
         {/* BACKGROUND IMAGES CONTAINER */}
         <div className="absolute pt-10 md:pt-0 inset-0 overflow-hidden">
           <img
