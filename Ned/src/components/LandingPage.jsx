@@ -210,12 +210,12 @@ export default function LandingPage() {
       </section> */}
 
       {/* HERO */}
-      <section className="relative bg-[#FAFAF9] min-h-[75vh] md:min-h-[85vh] pt-32 pb-24 flex items-center overflow-hidden">
+      <section className="relative bg-[#FAFAF9] min-h-[75vh] md:min-h-[85vh] pt-32 md:my-18 pb-24 flex items-center overflow-hidden">
         {/* BACKGROUND IMAGES CONTAINER */}
         <div className="absolute inset-0 w-full h-full">
           <img
             src={HeroImg}
-            className="w-full h-full md:w-1/2 md:ml-auto object-cover object-center opacity-90 max-md:hidden"
+            className="w-full h-full  md:ml-auto object-cover object-center  opacity-90 max-md:hidden"
             alt="Debbie Ned Hero"
           />
           <img
