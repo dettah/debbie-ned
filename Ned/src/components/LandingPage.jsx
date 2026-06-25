@@ -27,7 +27,7 @@ const steps = [
     title: "Assessment",
     icon: <AssessmentIcon />,
     image: AssessmentImg,
-    details: "We understad your current level, goals, and learning style to create a personalized plan for your growth."
+    details: "We understand your current level, goals, and learning style to create a personalized plan for your growth."
   },
   {
     title: "Instrument-first training",
@@ -36,7 +36,7 @@ const steps = [
     details: "We build a strong foundation on your chosen instrument with practical, hands-on lessons."
   },
   {
-    title: "Transcription mastery",
+    title: "Solfa mastery",
     icon: <TranscriptionIcon />,
     image: TranscriptionImg,
     details: "Learn to transcribe songs by ear-melody, chords, and basslines-unlocking your ears and creativity."
@@ -155,12 +155,12 @@ export default function LandingPage() {
 
 
       {/* HERO */}
-      <section className="relative border bg-[#FAFAF9] min-h-auto md:min-h-[65vh] lg:min-h-[70vh] pt-38 pb-20 md:my-30 flex items-center bg-[#FAFAF9">
-        {/* BACKGROUND IMAGES CONTAINER */}
-        <div className="absolute pt-10 md:pt-0 inset-0 overflow-hidden">
+      {/* <section className="relative border bg-[#FAFAF9] min-h-auto md:min-h-[65vh] lg:min-h-[70vh] pt-42 pb-24 md:my-28 flex items-center bg-[#FAFAF9">*/}
+      {/* BACKGROUND IMAGES CONTAINER */}
+      {/* <div className="absolute pt-10 md:pt-0 inset-0 overflow-hidden">
           <img
             src={HeroImg}
-            className="w-full h-auto  md:ml-auto object-cover opacity-90 max-md:hidden"
+            className="w-full h-auto md:ml-auto object-cover opacity-90 max-md:hidden"
             alt="Debbie Ned Hero"
           />
           <img
@@ -168,14 +168,14 @@ export default function LandingPage() {
             className="md:hidden w-full h-full object-cover opacity-100"
             alt="Debbie Ned Hero Mobile"
           />
-        </div>
+        </div> */}
 
-        {/* BALANCED LIGHT GRADIENT OVERLAY */}
-        {/* Mobile overlay covers top to bottom; Desktop overlay creates a solid text plate on the left and fades out completely over the photo on the right */}
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#FAFAF9ea]/90 to-[#FAFAF9] md:bg-linear-to-r md:from-[#FAFAF9] md:via-[#FAFAF9]/95 md:to-transparent md:w-3/4"></div>
+      {/* BALANCED LIGHT GRADIENT OVERLAY */}
+      {/* Mobile overlay covers top to bottom; Desktop overlay creates a solid text plate on the left and fades out completely over the photo on the right */}
+      {/* <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#FAFAF9ea]/90 to-[#FAFAF9] md:bg-linear-to-r md:from-[#FAFAF9] md:via-[#FAFAF9]/95 md:to-transparent md:w-3/4"></div> */}
 
-        {/* TEXT & CTAs CONTAINER */}
-        <div className="relative z-10 max-w-7xl md:mt-6 md:w-fit md:ml-16 mx-auto px-6 w-full">
+      {/* TEXT & CTAs CONTAINER */}
+      {/* <div className="relative z-10 max-w-7xl md:mt-6 md:w-fit md:ml-16 mx-auto px-6 w-full">
           <p className="text-xs tracking-[0.3em] w-fit  uppercase text-[#475569] font-semibold mb-4 typing">
             Piano • Bass • Vocals
           </p>
@@ -189,11 +189,65 @@ export default function LandingPage() {
             Empowering all through musical knowledge — Raising musical giants all over the world!
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex gap-4"> */}
+      {/* BRAND ACCENT CTA BUTTON */}
+      {/* <a
+              href="#contact"
+              className="px-2 flex-1 md:px-7 py-3.5 bg-[#F59E0B] text-white rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 whitespace-nowrap font-semibold tracking-wide text-center"
+            >
+              Book a Session
+            </a> */}
+
+      {/* SECONDARY OUTLINE BUTTON */}
+      {/*<a
+              href="#programmes"
+              className="px-2 text-center flex-1 md:px-7 py-3.5 border border-[#E7E5E4] bg-white text-[#0F172A] rounded-full hover:bg-[#F5F5F4] hover:border-[#D6D3D1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#0F172A]/5"
+            >
+              View Programmes
+            </a>
+          </div>
+        </div>
+      </section> */}
+
+      {/* HERO */}
+      <section className="relative bg-[#FAFAF9] min-h-[75vh] md:min-h-[85vh] pt-32 pb-24 flex items-center overflow-hidden">
+        {/* BACKGROUND IMAGES CONTAINER */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={HeroImg}
+            className="w-full h-full md:w-1/2 md:ml-auto object-cover object-center opacity-90 max-md:hidden"
+            alt="Debbie Ned Hero"
+          />
+          <img
+            src={HeroImg_sm}
+            className="md:hidden w-full h-full object-cover object-center opacity-100"
+            alt="Debbie Ned Hero Mobile"
+          />
+        </div>
+
+        {/* BALANCED LIGHT GRADIENT OVERLAY */}
+        <div className="absolute inset-0 bg-linear-to-b from-[#FAFAF9]/40 via-[#FAFAF9]/90 to-[#FAFAF9] md:bg-linear-to-r md:from-[#FAFAF9] md:via-[#FAFAF9]/80 md:to-transparent"></div>
+
+        {/* TEXT & CTAs CONTAINER */}
+        <div className="relative z-10 max-w-7xl w-full md:w-fit md:ml-16 mx-auto px-6">
+          <p className="text-xs tracking-[0.3em] w-fit uppercase text-[#475569] font-semibold mb-4 typing">
+            Piano • Bass • Vocals
+          </p>
+          <div className="w-fit">
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-[#0F172A]">
+              Debbie Ned
+            </h1>
+          </div>
+
+          <p className="mt-6 text-[#475569] text-lg max-w-lg font-normal leading-relaxed">
+            Empowering all through musical knowledge — Raising musical giants all over the world!
+          </p>
+
+          <div className="mt-8 flex gap-4 max-w-md">
             {/* BRAND ACCENT CTA BUTTON */}
             <a
               href="#contact"
-              className="px-2 flex-1 md:px-7 py-3.5 bg-[#F59E0B] text-white rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 whitespace-nowrap font-semibold tracking-wide text-center"
+              className="px-4 flex-1 md:px-7 py-3.5 bg-[#F59E0B] text-white rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 whitespace-nowrap font-semibold tracking-wide text-center"
             >
               Book a Session
             </a>
@@ -201,7 +255,7 @@ export default function LandingPage() {
             {/* SECONDARY OUTLINE BUTTON */}
             <a
               href="#programmes"
-              className="px-2 text-center flex-1 md:px-7 py-3.5 border border-[#E7E5E4] bg-white text-[#0F172A] rounded-full hover:bg-[#F5F5F4] hover:border-[#D6D3D1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#0F172A]/5"
+              className="px-4 text-center flex-1 md:px-7 py-3.5 border border-[#E7E5E4] bg-white text-[#0F172A] rounded-full hover:bg-[#F5F5F4] hover:border-[#D6D3D1] transition duration-200 whitespace-nowrap font-medium shadow-sm shadow-[#0F172A]/5"
             >
               View Programmes
             </a>
@@ -222,11 +276,11 @@ export default function LandingPage() {
         {/* STATS COUNT GRID */}
         <div className="grid md:grid-cols-4 gap-6">
           <div className="border-x border-[#E7E5E4] md:border-r md:border-x-0 py-4 md:py-0">
-            <h3 className="text-4xl font-extrabold text-[#F59E0B]">50+</h3>
+            <h3 className="text-4xl font-extrabold text-[#F59E0B]">100+</h3>
             <p className="text-[#475569] font-medium text-sm mt-1 uppercase tracking-wider">Clients</p>
           </div>
           <div className="border-x border-[#E7E5E4] md:border-r md:border-x-0 py-4 md:py-0">
-            <h3 className="text-4xl font-extrabold text-[#F59E0B]">3</h3>
+            <h3 className="text-4xl font-extrabold text-[#F59E0B]">2</h3>
             <p className="text-[#475569] font-medium text-sm mt-1 uppercase tracking-wider">Instruments</p>
           </div>
           <div className="border-x border-[#E7E5E4] md:border-r md:border-x-0 py-4 md:py-0">
@@ -364,11 +418,11 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               {/* PRIMARY MAIL CTA */}
               <a
-                href="mailto:debbiened@gmail.com"
+                href="mailto:deborahebhomien7@gmail.com"
                 className="w-full sm:w-auto px-8 py-4 bg-[#F59E0B] text-white font-semibold rounded-full hover:bg-[#D97706] hover:scale-105 shadow-md shadow-[#F59E0B]/20 transition duration-200 flex items-center justify-center gap-3"
               >
                 <img src={Mail} alt="" className="h-5 w-5 brightness-0 invert" />
-                Book a Free Session
+                Book a Session
               </a>
             </div>
           </section>
