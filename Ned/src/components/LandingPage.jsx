@@ -210,7 +210,7 @@ export default function LandingPage() {
       </section> */}
 
       {/* HERO */}
-      <section className="relative bg-[#FAFAF9] min-h-[75vh] md:min-h-[85vh] pt-32 md:my-18 pb-24 flex items-center overflow-hidden">
+      <section className="relative bg-[#FAFAF9] min-h-[75vh] md:min-h-[85vh] pt-48 md:pt-32 md:my-18 pb-24 flex items-center overflow-hidden">
         {/* BACKGROUND IMAGES CONTAINER */}
         <div className="absolute inset-0 w-full h-full">
           <img
