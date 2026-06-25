@@ -388,7 +388,7 @@ export default function LandingPage() {
       </>
 
       {/* WHAT TO EXPECT (YOUR JOURNEY) */}
-      <section className="py-24 px-6 bg-white border-t border-b border-[#E7E5E4]">
+      {/* <section className="py-24 px-6 bg-white border-t border-b border-[#E7E5E4]">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 text-[#0F172A]">
           Your Journey
         </h2>
@@ -401,10 +401,10 @@ export default function LandingPage() {
             >
               <div className="overflow-hidden rounded-lg">
                 <img src={item.image} alt={item.title} className="w-full h-auto object-cover" />
-              </div>
+              </div> */}
 
               {/* ICON CONTAINER */}
-              <div className="w-10 h-10 flex items-center justify-center p-2 text-[#475569] group-hover:text-white rounded-full bg-[#E7E5E4]/50 group-hover:bg-[#F59E0B] transition duration-300">
+              {/* <div className="w-10 h-10 flex items-center justify-center p-2 text-[#475569] group-hover:text-white rounded-full bg-[#E7E5E4]/50 group-hover:bg-[#F59E0B] transition duration-300">
                 {item.icon}
               </div>
 
@@ -414,8 +414,8 @@ export default function LandingPage() {
               </h4>
             </div>
           ))}
-        </div>
-      </section>
+        </div> 
+      </section> */}
 
 
       {/* PROGRAMMES */}
