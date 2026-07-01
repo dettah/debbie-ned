@@ -1,8 +1,8 @@
 import React from 'react'
-import X_logo from "../assets/socials/x-twitter-brands-solid.png"
-import Fb_logo from "../assets/socials/facebook-f-brands-solid.png"
-import LinkedIn_logo from "../assets/socials/linkedin-in-brands-solid.png"
-import WhatsApp from "../assets/socials/whatsapp-brands-solid.png"
+import X_logo from "../assets/socials/x-twitter-brands-solid.webp"
+import Fb_logo from "../assets/socials/facebook-f-brands-solid.webp"
+import LinkedIn_logo from "../assets/socials/linkedin-in-brands-solid.webp"
+import WhatsApp from "../assets/socials/whatsapp-brands-solid.webp"
 
 const socials = [
     {
@@ -42,7 +42,7 @@ const Socials = () => {
                     rel='noopener noreferrer'
                     className='w-10 h-10 flex items-center justify-center border border-[#E7E5E4] rounded-full p-2.5 bg-white shadow-sm shadow-[#0F172A]/5 hover:border-[#F59E0B] hover:bg-[#F59E0B]/5 hover:scale-110 transition duration-300'
                 >
-                    <img src={item.img} alt={item.alt} className='h-full w-auto object-contain opacity-80 hover:opacity-100' />
+                    <img src={item.img} loading='lazy' alt={item.alt} className='h-full w-auto object-contain opacity-80 hover:opacity-100' />
                 </a>
             ))}
         </div>

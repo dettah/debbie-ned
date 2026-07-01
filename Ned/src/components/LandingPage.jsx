@@ -1,76 +1,65 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import HeroImg from "../assets/musician.png";
-import HeroImg_sm from "../assets/musician_sm.jpg";
+import HeroImg from "../assets/musician.webp";
+import HeroImg_sm from "../assets/musician_sm.webp";
 import '../App.css'
-import AssessmentImg from "../assets/debbie_assessment.png"
-import TrainingImg from "../assets/debbie_training.png"
-import TranscriptionImg from "../assets/debbie_transcription.png"
-import CommunityImg from "../assets/debbie_community.png"
-import Rehearse from "../assets/debbie_rehearsal.jpg"
-import Transcription from "../assets/debbie_online.jpg"
-import Online from "../assets/online.png"
-import Group from "../assets/team.png"
-import { AssessmentIcon } from "./svgs/AssessmentIcon";
-import Logo from "../assets/logo.png";
-import { InstrumentIcon } from "./svgs/InstrumentIcon";
-import { CommunityIcon } from "./svgs/CommunityIcon";
-import { TranscriptionIcon } from "./svgs/TranscriptionIcon";
+import Online from "../assets/online.webp"
+import Group from "../assets/team.webp"
+import Logo from "../assets/logo.webp";
 import Socials from "./Socials";
-import Mail from "../assets/socials/envelope-regular.png"
-import Call from "../assets/socials/phone-solid.png"
-import FooterBackground from "../assets/music_background.jpg"
+import Mail from "../assets/socials/envelope-regular.webp"
+import Call from "../assets/socials/phone-solid.webp"
 
 
-const steps = [
-  {
-    title: "Assessment",
-    icon: <AssessmentIcon />,
-    image: AssessmentImg,
-    details: "We understand your current level, goals, and learning style to create a personalized plan for your growth."
-  },
-  {
-    title: "Instrument-first training",
-    icon: <InstrumentIcon />,
-    image: TrainingImg,
-    details: "We build a strong foundation on your chosen instrument with practical, hands-on lessons."
-  },
-  {
-    title: "Solfa mastery",
-    icon: <TranscriptionIcon />,
-    image: TranscriptionImg,
-    details: "Learn to transcribe songs by ear-melody, chords, and basslines-unlocking your ears and creativity."
-  },
-  {
-    title: "Confidence & community",
-    icon: <CommunityIcon />,
-    image: CommunityImg,
-    details: "Grow with a supportive sisterhood that encourages, uplifts, and celebrates every milestone."
-  },
-];
+// const steps = [
+//   {
+//     title: "Assessment",
+//     icon: <AssessmentIcon />,
+//     image: AssessmentImg,
+//     details: "We understand your current level, goals, and learning style to create a personalized plan for your growth."
+//   },
+//   {
+//     title: "Instrument-first training",
+//     icon: <InstrumentIcon />,
+//     image: TrainingImg,
+//     details: "We build a strong foundation on your chosen instrument with practical, hands-on lessons."
+//   },
+//   {
+//     title: "Solfa mastery",
+//     icon: <TranscriptionIcon />,
+//     image: TranscriptionImg,
+//     details: "Learn to transcribe songs by ear-melody, chords, and basslines-unlocking your ears and creativity."
+//   },
+//   {
+//     title: "Confidence & community",
+//     icon: <CommunityIcon />,
+//     image: CommunityImg,
+//     details: "Grow with a supportive sisterhood that encourages, uplifts, and celebrates every milestone."
+//   },
+// ];
 
-const offerings = [
-  {
-    title: "Online Courses",
-    image: Online,
-  },
-  {
-    title: "Group Coaching",
-    image: Rehearse,
-  },
-  {
-    title: "Church Team Training",
-    image: Group,
-  },
-  {
-    title: "Music Transcription",
-    image: Transcription,
-  },
-
-
+// const offerings = [
+//   {
+//     title: "Online Courses",
+//     image: Online,
+//   },
+//   {
+//     title: "Group Coaching",
+//     image: Rehearse,
+//   },
+//   {
+//     title: "Church Team Training",
+//     image: Group,
+//   },
+//   {
+//     title: "Music Transcription",
+//     image: Transcription,
+//   },
 
 
-]
+
+
+// ]
 
 const specializations = [
   { title: "Voice Training", desc: "Unlock vocal range, tone control, and breathing power." },
@@ -141,78 +130,69 @@ export default function LandingPage() {
     <>
 
       <div className="bg-[#F8FAFC] text-[#0F172A] font-sans scroll-smooth">
-  
-  {/* GLOBAL HEADER WRAPPER CONTAINER */}
-  <header className="fixed top-0 left-0 w-full z-50">
-    
-    {/* GLOBAL ANNOUNCEMENT BAR (SELF-DRIVEN MARQUEE CAROUSEL) */}
-    <div className="w-full bg-[#0F172A] text-white text-xs font-semibold py-2.5 overflow-hidden border-b border-[#F59E0B]/20 select-none">
-      <div className="flex animate-marquee whitespace-nowrap gap-12 w-max">
-        {/* FIRST RUN OF ANNOUNCEMENTS */}
-        <div className="flex items-center gap-12">
-          <div className="flex items-center gap-1.5">
-            <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Every Friday</span>
-            <span>General Solfa Classes are live!</span>
+
+        {/* GLOBAL HEADER WRAPPER CONTAINER */}
+        <header className="fixed top-0 left-0 w-full z-50">
+
+          {/* GLOBAL ANNOUNCEMENT BAR (SELF-DRIVEN MARQUEE CAROUSEL) */}
+          <div className="w-full bg-[#0F172A] text-white text-xs font-semibold py-2.5 overflow-hidden border-b border-[#F59E0B]/20 select-none">
+            <div className="flex animate-marquee whitespace-nowrap gap-12 w-max">
+              {/* FIRST RUN OF ANNOUNCEMENTS */}
+              <div className="flex items-center gap-12">
+                <div className="flex items-center gap-1.5">
+                  <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Every Friday</span>
+                  <span>General Solfa Classes are live!</span>
+                </div>
+                <div className="text-[#E7E5E4]/20">•</div>
+                <div className="flex items-center gap-1.5">
+                  <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Monthly</span>
+                  <span>Specialized Directors Training Cohort</span>
+                </div>
+              </div>
+
+              {/* DUPLICATE COPY FOR SEAMLESS LOOP INFINITE FLOW */}
+              <div className="flex items-center gap-12" aria-hidden="true">
+                <div className="flex items-center gap-1.5">
+                  <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Every Friday</span>
+                  <span>General Solfa Classes are live!</span>
+                </div>
+                <div className="text-[#E7E5E4]/20">•</div>
+                <div className="flex items-center gap-1.5">
+                  <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Monthly</span>
+                  <span>Specialized Directors Training Cohort</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="text-[#E7E5E4]/20">•</div>
-          <div className="flex items-center gap-1.5">
-            <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Monthly</span>
-            <span>Specialized Directors Training Cohort</span>
-          </div>
-        </div>
 
-        {/* DUPLICATE COPY FOR SEAMLESS LOOP INFINITE FLOW */}
-        <div className="flex items-center gap-12" aria-hidden="true">
-          <div className="flex items-center gap-1.5">
-            <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Every Friday</span>
-            <span>General Solfa Classes are live!</span>
-          </div>
-          <div className="text-[#E7E5E4]/20">•</div>
-          <div className="flex items-center gap-1.5">
-            <span className="bg-[#F59E0B] text-[#0F172A] text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-sm">Monthly</span>
-            <span>Specialized Directors Training Cohort</span>
-          </div>
-        </div>
-      </div>
-    </div>
+          {/* NAVBAR (Positioned relatively within the fixed header) */}
+          <nav className="w-full bg-white/80 backdrop-blur-xl px-6 py-4 flex justify-between items-center border-b border-[#E7E5E4] shadow-sm shadow-[#0F172A]/5">
+            <img src={Logo} alt="debbie_ned's logo" className="h-[8vh] md:h-[12vh]" />
 
-    {/* NAVBAR (Positioned relatively within the fixed header) */}
-    <nav className="w-full bg-white/80 backdrop-blur-xl px-6 py-4 flex justify-between items-center border-b border-[#E7E5E4] shadow-sm shadow-[#0F172A]/5">
-      <img src={Logo} alt="debbie_ned's logo" className="h-[8vh] md:h-[12vh]" />
+            {/* DESKTOP NAVIGATION LINKS */}
+            <div className="hidden md:flex gap-8 text-sm text-[#475569]">
+              <a href="#about" className="hover:text-[#0F172A] font-medium transition">About</a>
+              <a href="#programmes" className="hover:text-[#0F172A] font-medium transition">Programmes</a>
+              <a href="#offerings" className="hover:text-[#0F172A] font-medium transition">Offerings</a>
+              <a href="#contact" className="hover:text-[#F59E0B] font-semibold transition">Book</a>
+            </div>
 
-      {/* DESKTOP NAVIGATION LINKS */}
-      <div className="hidden md:flex gap-8 text-sm text-[#475569]">
-        <a href="#about" className="hover:text-[#0F172A] font-medium transition">About</a>
-        <a href="#programmes" className="hover:text-[#0F172A] font-medium transition">Programmes</a>
-        <a href="#offerings" className="hover:text-[#0F172A] font-medium transition">Offerings</a>
-        <a href="#contact" className="hover:text-[#F59E0B] font-semibold transition">Book</a>
-      </div>
+            <div className="flex items-center gap-3">
+              {/* THEME TOGGLE */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full bg-[#F5F5F4] text-[#0F172A] hover:bg-[#E7E5E4] hover:scale-110 transition"
+              >
+                {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
 
-      <div className="flex items-center gap-3">
-        {/* THEME TOGGLE */}
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-full bg-[#F5F5F4] text-[#0F172A] hover:bg-[#E7E5E4] hover:scale-110 transition"
-        >
-          {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-        </button>
-
-        {/* MOBILE MENU TRIGGER */}
-        <button className="md:hidden text-[#0F172A]" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  {/* CRUCIAL LAYOUT RULE: Your Hero/Main content below needs enough padding-top to not get covered by this thick fixed header header*/}
-  {/*
-  <main className="pt-[140px] md:pt-[180px]">
-    {/* Rest of your page content, Hero etc. goes here */}
-    {/*
-  </main>
-</div> */}
-
+              {/* MOBILE MENU TRIGGER */}
+              <button className="md:hidden text-[#0F172A]" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <X /> : <Menu />}
+              </button>
+            </div>
+          </nav>
+        </header>
 
 
 
@@ -349,7 +329,9 @@ export default function LandingPage() {
                   </div>
 
                   <div className="overflow-hidden rounded-sm mb-5">
-                    <img src={track.image} alt={track.name} className="w-full h-auto object-cover" />
+                    <img src={track.image} alt={track.name} 
+                    loading="lazy"
+                    className="w-full h-auto object-cover" />
                   </div>
                   <a
                     href="#contact"
@@ -473,22 +455,9 @@ export default function LandingPage() {
         </section>
 
 
-
-
-
-
-
         {/* FOOTER */}
         <footer className="relative bg-[#FAFAF9] border-t border-[#E7E5E4] overflow-hidden text-[#475569]">
-          {/* BACKGROUND IMAGE & VISUAL OVERLAY */}
-          <div className="absolute inset-0">
-            <img
-              src={FooterBackground}
-              alt=""
-              className="w-full h-full object-cover opacity-10 filter sepia-20"
-            />
-            <div className="absolute inset-0 bg-linear-to-b from-[#FAFAF9]/60 via-[#FAFAF9]/90 to-[#FAFAF9]"></div>
-          </div>
+
 
           {/* MAIN CONTENT AREA */}
           <div className="relative z-10 max-w-6xl mx-auto px-6">
